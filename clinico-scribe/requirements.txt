@@ -1,0 +1,21 @@
+fastapi==0.104.1
+uvicorn==0.24.0
+torch==2.1.0
+transformers==4.36.0
+accelerate==0.25.0
+bitsandbytes==0.41.0
+whisper-openai==20231117
+librosa==0.10.1
+soundfile==0.12.1
+pydantic==2.5.0
+pyyaml==6.0.1
+python-multipart==0.0.6
+numpy==1.24.3
+scipy==1.11.0
+sentencepiece==0.1.99
+protobuf==4.25.0
+
+# 开发依赖
+pytest==7.4.0
+black==23.11.0
+flake8==6.1.0

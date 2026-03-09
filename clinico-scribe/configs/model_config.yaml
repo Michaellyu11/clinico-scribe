@@ -1,0 +1,27 @@
+# 模型配置
+model_name: "unsloth/llama-3-8b-Instruct"  # 基础模型
+quantization: "4bit"  # 4-bit 量化
+max_tokens: 1024
+temperature: 0.3  # 医疗文本需要低温度
+
+# 推理配置
+batch_size: 1
+use_cache: true
+
+# 科室特定配置
+departments:
+  cardiology:
+    temperature: 0.2  # 心内科需要更精确
+    max_tokens: 1200
+  orthopedics:
+    temperature: 0.3
+    max_tokens: 1000
+  emergency:
+    temperature: 0.2  # 急诊需要快速准确
+    max_tokens: 800
+
+# 语音配置
+whisper:
+  model_size: "medium"  # tiny/base/small/medium/large
+  language: "zh"
+  medical_mode: true
